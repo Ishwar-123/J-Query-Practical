@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            width: 100%;
+            height: 100px;
+            background-color: gray;
+        }
+
+        .one {
+            display: flex;
+            width: 600px;
+            height: inherit;
+        }
+
+        .part1 {
+            width: 200px;
+            height: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            color: white;
+        }
+
+        .part2 {
+            width: 200px;
+            height: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            color: white;
+
+
+        }
+
+        .part3 {
+            width: 200px;
+            height: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            color: white;
+
+
+        }
+
+        .part4 i {
+            display: none;
+        }
+
+        .two {
+            height: 100vh;
+            width: 200px;
+            /* background-color: aqua; */
+            display: none;
+        }
+
+
+        @media (min-width:320px) and (max-width:480px) {
+            .part1 {
+                width: 200px;
+                height: 70px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                display: none;
+            }
+
+            .part2 {
+                width: 200px;
+                height: 70px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                display: none;
+            }
+
+            .part3 {
+                width: 200px;
+                height: 70px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                display: none;
+            }
+
+            .part4 i {
+                display: block;
+                margin-top: 45px;
+                margin-left: 430px;
+            }
+
+            .one {
+                width: 200px;
+                height: 300px;
+                display: block;
+                margin-top: 200px;
+                margin-left: 280px;
+                z-index: 5000;
+                padding-top: 100px;
+                /* padding-left: 150px; */
+            }
+
+            .two {
+                margin-left: 280px;
+                display: block;
+            }
+
+            .part4 i {
+                margin-top: -250px;
+            }
+
+            html {
+                margin-top: -200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="one">
+            <div class="part1">Home</div>
+            <div class="part2">Menu</div>
+            <div class="part3">About</div>
+        </div>
+        <div class="part4"> <i class="fa-solid fa-bars fa-2xl" style="color: #74C0FC;"></i>
+        </div>
+    </header>
+    <div class="two"></div>
+    <script>
+        $(document).ready(function () {
+            $("i").click(function () {
+                $(".part1").toggle()
+                $(".part2").toggle()
+                $(".part3").toggle()
+            })
+        })
+    </script>
+</body>
+
+</html>
